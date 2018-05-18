@@ -1,3 +1,5 @@
+import {MAKE_GUESS} from '../actions';
+
 const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
@@ -6,5 +8,10 @@ const initialState = {
 };
 
 export const gameReducer = (state=initialState, action) => {
+  if(action.type === MAKE_GUESS) {
+    return Object.assign({}, state, {
+      guesses: [...guesses, action.guess]
+    });
+  }
   return state;
 };
