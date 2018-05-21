@@ -1,6 +1,4 @@
-//import {MAKE_GUESS} from '../actions';
 import {RESTART_GAME, MAKE_GUESS, GENERATE_AURAL_UPDATE} from '../actions';
-
 
 const initialState = {
   guesses: [],
@@ -8,15 +6,6 @@ const initialState = {
   auralStatus: '',
   correctAnswer: Math.round(Math.random() * 100) + 1
 };
-
-// export const gameReducer = (state=initialState, action) => {
-//   if(action.type === MAKE_GUESS) {
-//     return Object.assign({}, state, {
-//       guesses: [...state.guesses, action.guess]
-//     });
-//   }
-//   return state;
-// };
 
 export default (state = initialState, action) => {
   if (action.type === RESTART_GAME) {
