@@ -12,7 +12,7 @@ export default function Game(props) {
       <main role="main">
         <GuessSection />
         <StatusSection />
-        {/* <InfoSection /> */}
+        <InfoSection />
       </main>
     </div>
   );

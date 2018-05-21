@@ -1,15 +1,15 @@
 import React from 'react';
 
-import GuessList from './guess-list';
 import GuessCount from './guess-count';
+import GuessList from './guess-list';
 import AuralStatus from './aural-status';
 
 export default function StatusSection(props) {
   return (
     <section aria-labelledby="guessCount" aria-describedby="guessList">
       <GuessCount />
-      {/* <GuessList guesses={guesses} />
-      <AuralStatus auralStatus={auralStatus} /> */}
+      <GuessList />
+      <AuralStatus />
     </section>
   );
 }
